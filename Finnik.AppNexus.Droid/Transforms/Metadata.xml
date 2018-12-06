@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+    <!--
+  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+  
+  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  -->
+    <attr
+        path="/api/package[@name='com.appnexus.opensdk']/interface[@name='Ad']"
+        name="visibility">public</attr>
+    <attr
+        path="/api/package[@name='com.appnexus.opensdk']/interface[@name='AdDispatcher']"
+        name="visibility">public</attr>
+    <attr
+        path="/api/package[@name='com.appnexus.opensdk']/interface[@name='Displayable']"
+        name="visibility">public</attr>
+    <attr
+        path="/api/package[@name='com.appnexus.opensdk']/interface[@name='MediatedAdView']"
+        name="visibility">public</attr>
+    <attr
+        path="/api/package[@name='com.appnexus.opensdk']/class[@name='MediatedDisplayable']"
+        name="visibility">public</attr>
+    <attr
+        path="/api/package[@name='com.appnexus.opensdk']/class[@name='BannerAdView']/method[@name='onLayout']"
+        name="visibility">public</attr>
+    <attr
+        path="/api/package[@name='com.appnexus.opensdk']/interface[@name='AdListener']/method[@name='onAdLoaded' and count(parameter)=1 and parameter[1][@type='com.appnexus.opensdk.AdView']]"
+        name="managedName">AdLoadedAdView</attr>
+    <attr
+        path="/api/package[@name='com.appnexus.opensdk']/interface[@name='AdListener']/method[@name='onAdLoaded' and count(parameter)=1 and parameter[1][@type='com.appnexus.opensdk.NativeAdResponse']]"
+        name="managedName">AdLoadedAdNativeAdResponse</attr>
+    <attr
+        path="/api/package[@name='com.appnexus.opensdk']/interface[@name='AdListener']/method[@name='onAdClicked' and count(parameter)=1 and parameter[1][@type='com.appnexus.opensdk.AdView']]"
+        name="managedName">OnAdClickedOpenBrowserHandler</attr>
+    <attr
+        path="/api/package[@name='com.appnexus.opensdk']/interface[@name='NativeAdEventListener']/method[@name='onAdWasClicked' and count(parameter)=2 and parameter[1][@type='java.lang.String'] and parameter[2][@type='java.lang.String']]"
+        name="managedName">OnAdWasClickedUrlsHandler</attr>
+    <attr
+        path="/api/package[@name='com.appnexus.opensdk']/class[@name='BannerAdView']/method[@name='onLayout' and count(parameter)=5 and parameter[1][@type='boolean'] and parameter[2][@type='int'] and parameter[3][@type='int'] and parameter[4][@type='int'] and parameter[5][@type='int']]"
+        name="visibility">protected</attr>
+    <remove-node
+        path="/api/package[@name='com.appnexus.opensdk.ut']/class[@name='UTAdRequest']" />
+    <remove-node
+        path="/api/package[@name='com.appnexus.opensdk.utils']/class[@name='ImageService']" />
+</metadata>
